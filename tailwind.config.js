@@ -6,11 +6,15 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {},
+    screens:{
+      'cel': '500px'
+    },
     colors: {
       primary: '#000',
       secondary: '#15181C',
       search: '#202327',
       white: '#D9D9D9',
+      lesswhite: '#d4d4d4',
       tw: '#fff',
       gray: '#7A7A7A',
       outline: '#2F3336',
