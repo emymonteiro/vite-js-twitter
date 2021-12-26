@@ -2,9 +2,9 @@
   <div class="dark">
     <div class="flex flex-col min-h-screen bg-tw dark:bg-primary text-primary dark:text-white">
       <div id="wrapper" class="h-full max-w-1280px m-0-auto flex flex-col justify-center items-center">
-        <div id="wrapperChild" class="flex flex-col w-full bg-tw dark:bg-primary  border-r border-l border-white dark:border-outline cel:border-solid z-2  ">
+        <div id="wrapperChild" class="flex flex-col w-full bg-tw dark:bg-primary  border-r border-l border-white dark:border-outline cel:border-solid z-[2]  ">
           <router-view />
-          <footer id="footerFather" class=" w-full flex justify-between fixed bottom-0 left-0 z-2 bg-tw dark:bg-primary">
+          <footer id="footerFather" class=" w-full flex justify-between fixed bottom-0 left-0 z-[2] bg-tw dark:bg-primary">
             <HomeIcon class="footerButtons" />
             <SearchIcon class="footerButtons" />
             <BellIcon class="footerButtons" />

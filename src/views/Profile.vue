@@ -1,5 +1,5 @@
 <template>
-        <header class="sticky t-0 flex items-center text-left profileHeader border-solid border-b border-white dark:border-outline" >
+        <header class="sticky z-[2] bg-tw dark:bg-primary top-0 flex items-center text-left profileHeader border-solid border-b border-white dark:border-outline" >
             <button class="p-2 outline-0 cursor-pointer rounded-full hover:dark:bg-outline hover:bg-white">
                 <ArrowLeftIcon class="profileSVG " />
             </button>
@@ -28,33 +28,35 @@
 
                 <ul>
                     <li>
-                        <LocationMarkerIcon class="h-5 w-5 text-gray mr-1" />
+                        <LocationMarkerIcon class="h-5 w-5 text-primary dark:text-white mr-1" />
                         Campo Grande, MS - Brazil
                     </li>
                     <li>
-                        <CakeIcon class="h-5 w-5 text-gray mr-1" />
+                        <CakeIcon class="h-5 w-5 text-primary dark:text-white mr-1" />
                         Nascida em 25 de Agosto de 1997
                     </li>
                 </ul>
                 <div id="Followage" class="flex">
                     <span>
-                        seguindo <strong> 94 </strong>
+                        seguindo <strong class="text-primary dark:text-white"> 94 </strong>
                     </span>
                     <span>
-                        <strong>94 </strong> seguidores
+                        <strong class="text-primary dark:text-white"> 94 </strong> seguidores
                     </span>
                 </div>
             </div>
         </main>
+        <Feed/>
 
     
 </template>
 
 <script>
     import { ArrowLeftIcon } from "@heroicons/vue/outline"
+    import Feed from '../components/Feed.vue'
     import { LocationMarkerIcon, CakeIcon } from "@heroicons/vue/solid"
     export default{
-        components: { ArrowLeftIcon, LocationMarkerIcon, CakeIcon }
+        components: { ArrowLeftIcon, LocationMarkerIcon, CakeIcon, Feed }
     }
 </script>
 
