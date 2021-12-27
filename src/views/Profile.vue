@@ -15,8 +15,8 @@
                 </div>
             </div>
             <div id="ProfileData">
-                <button id="editProfileButton" class="buttonInGeneral outlined border border-solid border-white dark:border-outline dark:hover:bg-outline hover:bg-white">
-                    Editar Perfil
+                <button id="editProfileButton" @click="this.$root.darkMode = !this.$root.darkMode" class="buttonInGeneral outlined border border-solid border-white dark:border-outline dark:hover:bg-outline hover:bg-white">
+                    {{this.$root.darkMode ? 'Desativar Modo Noturno' : 'Ativar Modo Noturno'}}
                 </button>
 
                 <h1>Emilly Monteiro</h1>

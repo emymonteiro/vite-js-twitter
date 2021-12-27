@@ -20,10 +20,31 @@ module.exports = {
         twitter: '#33A1F2',
         tdarkhover: '#011017',
         tlighthover: '#2C8ED6',
-      }
-    },
-    screens:{
-      'cel': '500px'
+      },
+      dropShadow: {
+        'tlike': '0px 0px 1px #e8265e',
+        'tcomment': '0px 0px 1px #33A1F2',
+        'tshare': '0px 0px 1px #00C06B',
+      },
+      screens:{
+        'cel': '500px',
+        // => @media (min-width: 500px) { ... }
+
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+
+        'xl': '1280px',
+        // => @media (min-width: 1280px) { ... }
+
+        '2xl': '1536px',
+        // => @media (min-width: 1536px) { ... }
+        },
     },
 
   },

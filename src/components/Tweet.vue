@@ -1,7 +1,7 @@
 <template>
         <div class="Tweet max-w-full flex flex-col border-solid border-b border-white dark:border-outline">
             <div class="Retweeted flex items-center text-gray ml-[30px] ">
-                <fa icon="coffee" class="retweetIcon mr-[10px]  h-[16px] w-[16px]" />
+                <fa icon="retweet" class="retweetIcon mr-[10px]  h-[16px] w-[16px]" />
                 Você retweetou
             </div>
             <div class="TweetBody flex mt-1 relative">
@@ -19,19 +19,19 @@
                     <div class="TweetImageContent mt-[12px] w-full bg-outline rounded-[14px] cursor-pointer hover:opacity-[.7]"></div>
                     <div class="TweetIcons flex items-center text-gray text-[14px] w-full mt-[11px] mx-auto justify-between flex-wrap">
                         <div class="TweetStatus flex items-center group">
-                            <div class="p-[5px] mr-[5px] rounded-full group-hover:bg-white dark:group-hover:bg-outline   group-hover:text-twitter">
+                            <div class="p-[5px] mr-[5px] group-hover:bg-opacity-[.1] dark:group-hover:bg-opacity-100 dark:group-hover:drop-shadow-none group-hover:drop-shadow-tcomment rounded-full group-hover:bg-white dark:group-hover:bg-tdarkhover   group-hover:text-twitter">
                                 <ChatIcon class="iconTweet h-5 w-5 group-hover:text-twitter " icon="heart" />
                             </div>
                             <p class="group-hover:text-twitter">900</p>
                         </div>
-                        <div class="TweetStatus flex items-center group">
-                            <div class="p-[5px] mr-[5px] rounded-full group-hover:bg-white dark:group-hover:bg-outline  group-hover:text-like">
-                                <HeartIcon class="iconTweet h-5 w-5 group-hover:text-like " icon="heart" />
+                        <div class="TweetStatus flex items-center  group ">
+                            <div class="p-[5px] mr-[5px] group-hover:bg-opacity-[.1] dark:group-hover:bg-opacity-100 dark:group-hover:drop-shadow-none group-hover:drop-shadow-tlike rounded-full group-hover:bg-white dark:group-hover:bg-tdarkhover  group-hover:text-like">
+                                <HeartIcon class="iconTweet  h-5 w-5 group-hover:text-like " icon="heart" />
                             </div>
                             <p class="group-hover:text-like">900</p>
                         </div>
                         <div class="TweetStatus flex items-center group">
-                            <div class="p-[5px] mr-[5px] rounded-full group-hover:bg-white dark:group-hover:bg-outline  group-hover:text-retweet">
+                            <div class="p-[5px] mr-[5px] group-hover:bg-opacity-[.1] dark:group-hover:bg-opacity-100 dark:group-hover:drop-shadow-none group-hover:drop-shadow-tshare rounded-full group-hover:bg-white dark:group-hover:bg-tdarkhover  group-hover:text-retweet">
                                 <fa class="" icon="retweet" />
                             </div>
                             <p class="group-hover:text-retweet">900</p>
@@ -67,8 +67,5 @@
     }
     .TweetIcons > div{
         cursor: pointer;
-    }
-    .iconTweet{
-        
     }
 </style>
