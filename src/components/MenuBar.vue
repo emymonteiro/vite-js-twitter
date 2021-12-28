@@ -90,8 +90,8 @@
             left: 0;
             padding: 9px 19px 20px;
             max-height: 100vh;
-            overflow-y: scroll;
-            /* overflow: hidden; */
+           /*  overflow-y: scroll; */
+            overflow: hidden;
         }
     }
     @media (min-width: 1280px){

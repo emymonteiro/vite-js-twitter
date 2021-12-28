@@ -11,7 +11,9 @@
             <BellIcon class="footerButtons" />
             <InboxIcon class="footerButtons" />
           </footer>
-        </div>
+        </div>  
+        <SideBar />
+
       </div>
     </div>
   </div>
@@ -21,8 +23,10 @@
 import { HomeIcon, BellIcon, SearchIcon, InboxIcon } from '@heroicons/vue/outline'
 import Main from './components/Profile.vue'
 import MenuBar from './components/MenuBar.vue'
+import SideBar from './components/SideBar.vue'
+
 export default {
-  components: { HomeIcon, BellIcon, SearchIcon, InboxIcon, Main, MenuBar },
+  components: { HomeIcon, BellIcon, SearchIcon, InboxIcon, Main, MenuBar, SideBar },
   data(){
     return {
       darkMode: true
@@ -79,4 +83,4 @@ export default {
     --twitter-light-hover: #2C8ED6;
   }
 
-</style>
+</style> 
