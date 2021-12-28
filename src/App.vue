@@ -29,7 +29,7 @@ export default {
   components: { HomeIcon, BellIcon, SearchIcon, InboxIcon, Main, MenuBar, SideBar },
   data(){
     return {
-      darkMode: true
+      darkMode: false
     }
   }
 }

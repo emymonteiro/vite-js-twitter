@@ -5,6 +5,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons'
 import router from './router/index.js'
 import App from './App.vue'
 
+
 library.add(fas);
 
 import './assets/css/tailwind.css'

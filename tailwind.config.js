@@ -11,7 +11,7 @@ module.exports = {
         secondary: '#15181C',
         search: '#202327',
         white: '#D9D9D9',
-        lesswhite: '#d4d4d4',
+        lesswhite: '#F7F9F9',
         tw: '#fff',
         gray: '#7A7A7A',
         outline: '#2F3336',

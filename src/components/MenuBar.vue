@@ -4,7 +4,7 @@
             <fa icon="coffee" class="text-[25px] mb-[20px] xl:ml-[15px]  text-twitter" />
             
             <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter">
-                <HomeIcon class="MenuIcons" />
+                <HomeIcon class="MenuIcons " />
                 <span>Pagina Inicial</span>
             </button>
             <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter">
@@ -90,8 +90,13 @@
             left: 0;
             padding: 9px 19px 20px;
             max-height: 100vh;
-           /*  overflow-y: scroll; */
-            overflow: hidden;
+            overflow-y: scroll;
+            /* overflow: hidden; */
+             -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+        #MenuBarContainer::-webkit-scrollbar {
+            display: none;
         }
     }
     @media (min-width: 1280px){
@@ -102,7 +107,7 @@
         .MenuButton >span{
             display: inline;
             margin-left: 19px;
-            font-weight: bold;
+            /* font-weight: bold; */
             font-size: 19px;
         }
         #ManuBarTopSide >button{
