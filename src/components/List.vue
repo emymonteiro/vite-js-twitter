@@ -13,6 +13,7 @@
                         :username="element.name" 
                         :nickname="element.nick" 
                         :url="element.url" 
+                        :data="element.addon"
                     />
                 </div>
             </div>

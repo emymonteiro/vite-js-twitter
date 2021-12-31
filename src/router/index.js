@@ -1,12 +1,56 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Profile from '../views/Profile.vue'
+/* import Home from '../views/Home.vue' */
+import { HomeIcon, BellIcon, SearchIcon, HeartIcon, InboxIcon, UserIcon, HashtagIcon, LogoutIcon } from "@heroicons/vue/outline"
 
 const routes = [
     {
         path: '/vite-js-twitter/',
-        name: 'Profile',
-        component: Profile
-    }
+        name: 'Perfil',
+        component: Profile,
+        icon: UserIcon,
+        menuBar: true,
+    },
+    {
+        path: '/vite-js-twitter/home',
+        name: 'Página Inicial',
+        component: Profile,
+        icon: HomeIcon,
+        menuBar: true,
+        mainMenu: true
+    },
+    {
+        path: '/vite-js-twitter/explore',
+        name: 'Explorar',
+        component: Profile,
+        icon: HashtagIcon,
+        menuBar: true,
+        mainMenu: true,
+        celIcon: SearchIcon
+    },
+    {
+        path: '/vite-js-twitter/notifications',
+        name: 'Notifications',
+        component: Profile,
+        icon: BellIcon,
+        menuBar: true,
+        mainMenu: true
+    },
+    {
+        path: '/vite-js-twitter/messages',
+        name: 'Messages',
+        component: Profile,
+        icon: InboxIcon,
+        menuBar: true,
+        mainMenu: true
+    },
+    {
+        path: '/vite-js-twitter/favorite',
+        name: 'Favorite',
+        component: Profile,
+        icon: HeartIcon,
+        menuBar: true,
+    },
 ]
 
 const router = createRouter({

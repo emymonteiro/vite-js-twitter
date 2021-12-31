@@ -6,23 +6,23 @@
             
         </div>
         
-        <div id="SideBarBody" ref="sidebarContent" :class="sidebarStyles">
+        <div id="SideBarBody" ref="sidebarContent">
             <List
-            title="Talvez você curta"
+            title="O que foi utilizado"
             :elements="[
-                { component: components.followercomponent , 'name': 'Emilly', 'nick': '@emymonteiro' },
-                { component: components.followercomponent , 'name': 'Guilherme', 'nick': '@guiserra' },
-                { component: components.followercomponent , 'name': 'Emilly', 'nick': '@emymonteiro' },
+                { component: components.followercomponent , 'name': 'Vite', 'nick': 'vitejs.dev', url: 'https://vitejs.dev/logo.svg' },
+                { component: components.followercomponent , 'name': 'Vue 3', 'nick': 'v3.vuejs.org', url: 'https://v3.vuejs.org/logo.png' },
+                { component: components.followercomponent , 'name': 'Tailwind CSS', 'nick': 'tailwindcss.com', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png' },
             ]"
              />
              
             <List 
-                title="O que está acontecendo"
+                title="Linguagens"
                 :elements="[
-                    { component: components.newscomponent },
-                    { component: components.newscomponent },
-                    { component: components.newscomponent },
-                    { component: components.newscomponent },
+                    { component: components.newscomponent, addon: {} },
+                    { component: components.newscomponent, addon: {} },
+                    { component: components.newscomponent, addon: {} },
+                    { component: components.newscomponent, addon: {} },
                 ]"
              />
              

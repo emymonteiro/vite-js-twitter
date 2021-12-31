@@ -4,6 +4,12 @@ module.exports = {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   darkMode: 'class',
+  variants: {
+    extend: {
+      backgroundColor: ['active'],
+      textColor: ['active'],
+    }
+  },
   theme: {
     extend: {
       colors: {

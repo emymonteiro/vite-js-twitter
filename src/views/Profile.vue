@@ -23,25 +23,26 @@
                 <h2>@emymonteiro</h2>
 
                 <p>
-                    Developer at <a href="https://cidadesouth.com">SouthRP</a>
+                    Developer at <a href="https://cidadesouth.com" target="_blank">SouthRP</a>
                 </p>
 
                 <ul>
                     <li>
-                        <LocationMarkerIcon class="h-5 w-5 text-primary dark:text-white mr-1" />
-                        Campo Grande, MS - Brazil
+                        <CakeIcon class="h-5 w-5 text-outline dark:text-white mr-1" />
+                        Nascida em 25 de Agosto de 1997
+                        
                     </li>
                     <li>
-                        <CakeIcon class="h-5 w-5 text-primary dark:text-white mr-1" />
-                        Nascida em 25 de Agosto de 1997
+                       <LocationMarkerIcon class="h-5 w-5 text-outline dark:text-white mr-1" />
+                        Campo Grande, MS - Brazil
                     </li>
                 </ul>
                 <div id="Followage" class="flex">
                     <span>
-                        seguindo <strong class="text-primary dark:text-white"> 94 </strong>
+                        <strong class="text-outline dark:text-white"> 112 </strong> seguindo
                     </span>
                     <span>
-                        <strong class="text-primary dark:text-white"> 94 </strong> seguidores
+                        <strong class="text-outline dark:text-white"> 135 </strong> seguidores
                     </span>
                 </div>
             </div>
@@ -91,15 +92,18 @@
         width: 100%;
         height: min(33vw, 199px);
 
-        background: var(--twitter);
         position: relative;
+        background: url('https://media.discordapp.net/attachments/419592647255261184/918603786908475403/Emy_1.png?width=1335&height=445') no-repeat;
+        background-size: 100% 100%;
     }
     #BannerAvatar{
         width: max(45px, min(135px, 22vw));
         height: max(45px, min(135px, 22vw));
 
         border: 3.75px solid ;
-        background: var(--gray);
+        background: url('https://avatars.githubusercontent.com/u/49368251?v=4');
+        background-size: 110% 110%;
+        background-position: center;
         border-radius: 50%;
         position: absolute;
         bottom: max(-60px, -10vw);

@@ -3,26 +3,16 @@
         <header id="ManuBarTopSide" class="flex flex-col items-center">
             <fa icon="coffee" class="text-[25px] mb-[20px] xl:ml-[15px]  text-twitter" />
             
-            <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter">
-                <HomeIcon class="MenuIcons " />
-                <span>Pagina Inicial</span>
+            <button 
+                v-for="(route, index) in routes" :key="index"
+                class="MenuButton hover:bg-white dark:hover:bg-tdarkhover"
+                :class="{ active: this.$route.path === route.path }"
+                @click="this.$router.push(route.path); "
+            >
+                <component :is="route.icon" class="MenuIcons" />
+                <span>{{route.name}}</span>
             </button>
-            <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter">
-                <BellIcon class="MenuIcons" />
-                <span>Notificações</span>
-            </button>
-            <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter">
-                <InboxIcon class="MenuIcons" />
-                <span>Mensagens</span>
-            </button>
-            <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter active">
-                <UserIcon class="MenuIcons" />
-                <span>Perfil</span>
-            </button>
-            <button class="MenuButton hover:bg-white dark:hover:bg-tdarkhover active:text-twitter">
-                <HeartIcon class="MenuIcons" />
-                <span>Favoritos</span>
-            </button>
+           
             <button class="buttonInGeneral bg-twitter text-tw  hover:bg-tlighthover">
                 <span class="hidden">Tweetar</span>
                 <span>
@@ -41,15 +31,33 @@
     </div>
 </template>
 <script>
+    import { ref, onBeforeMount } from 'vue'
+    import { useRouter } from 'vue-router'
     import { HomeIcon, BellIcon, HeartIcon, InboxIcon, UserIcon, LogoutIcon } from "@heroicons/vue/outline"
     export default{
         components: {
             HomeIcon,BellIcon, HeartIcon, InboxIcon,UserIcon,LogoutIcon
-        }
+        },
+        setup()
+        {
+            const routes = ref([]);
+            const router = useRouter();
+
+            onBeforeMount(() => {
+              routes.value = router.options.routes.filter(r => r.menuBar)
+            });
+            return {
+              routes
+            }
+        },
     }
 
 </script>
 <style>
+    .active{
+        font-weight: bold;
+        color: var(--twitter);
+    }
     #MenuBarContainer{
         display: none;
 
@@ -100,6 +108,9 @@
         }
     }
     @media (min-width: 1280px){
+        /* .active{
+            background: red;
+        } */
         #ManuBarTopSide{
 
             align-items: flex-start;

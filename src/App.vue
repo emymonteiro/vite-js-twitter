@@ -4,12 +4,16 @@
       <div id="wrapper" class="h-full max-w-1280px m-0-auto flex justify-center ">
         <MenuBar />
         <div id="wrapperChild" class="flex flex-col w-full bg-tw dark:bg-primary  border-r border-l border-white dark:border-outline cel:border-solid z-[2]  ">
+          
           <router-view />
           <footer id="footerFather" class=" w-full flex justify-between fixed bottom-0 left-0 z-[2] bg-tw dark:bg-primary">
-            <HomeIcon class="footerButtons" />
-            <SearchIcon class="footerButtons" />
-            <BellIcon class="footerButtons" />
-            <InboxIcon class="footerButtons" />
+            <router-link 
+              v-for="(route, index) in routes" :key="index"
+              :to="route.path"
+              :class="{ active: this.$route.path === route.path }"
+            >
+            <component :is="route.celIcon || route.icon" class="footerButtons" />
+            </router-link>
           </footer>
         </div>  
         <SideBar />
@@ -20,13 +24,25 @@
 </template>
 
 <script>
-import { HomeIcon, BellIcon, SearchIcon, InboxIcon } from '@heroicons/vue/outline'
 import Main from './components/Profile.vue'
 import MenuBar from './components/MenuBar.vue'
 import SideBar from './components/SideBar.vue'
+import { ref, onBeforeMount } from 'vue'
+import { useRouter } from 'vue-router'
 
 export default {
-  components: { HomeIcon, BellIcon, SearchIcon, InboxIcon, Main, MenuBar, SideBar },
+  components: { Main, MenuBar, SideBar },
+  setup(){
+    const routes = ref([]);
+    const router = useRouter();
+
+    onBeforeMount(() => {
+      routes.value = router.options.routes.filter(r => r.mainMenu)
+    });
+    return {
+      routes
+    }
+  },
   data(){
     return {
       darkMode: false
