@@ -17,24 +17,61 @@
              />
              
             <List 
-                title="Linguagens"
+                title="Front-end development"
                 :elements="[
-                    { component: components.newscomponent, addon: {} },
-                    { component: components.newscomponent, addon: {} },
-                    { component: components.newscomponent, addon: {} },
-                    { component: components.newscomponent, addon: {} },
+                    { 
+                        component: components.languages, data: [
+                            { name: 'HTML', img: 'https://logospng.org/download/html-5/logo-html-5-2048.png', class: 'w-8 h-8' },
+                            { name: 'CSS', img: 'https://logospng.org/download/css-3/logo-css-3-2048.png', class: 'w-8 h-8' },
+                            { name: 'Javascript', img: 'https://media.discordapp.net/attachments/419592647255261184/926560466547933194/logo-2048.png?width=564&height=564', class: 'w-8 h-8' },
+                        ],
+                    },
+                    { 
+                        component: components.languages, data: [
+                            { name: 'Node',  class: 'w-6' , img: 'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png' },
+                            { name: 'Vite', img: 'https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.png', class: 'w-6' },
+                            { name: 'Vue', img: 'https://v3.vuejs.org/logo.png', class: 'w-6' },
+                            { name: 'React', img: 'https://logospng.org/download/react/logo-react-256.png', class: 'ml-[-6px] w-8' },
+                            { name: 'Tailwind', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Tailwind_CSS_Logo.svg/2048px-Tailwind_CSS_Logo.svg.png', class: 'ml-[-6px] w-8' },
+                            { name: 'SASS/SCSS', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Sass_Logo_Color.svg/2560px-Sass_Logo_Color.svg.png', class: 'ml-[-6px] w-8' },
+                            
+                        ],
+                    },
+                ]"
+             />
+
+            <List 
+                title="Back-end development"
+                :elements="[
+                    { 
+                        component: components.languages, data: [
+                            { name: 'TypeScript', img: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_typescript_icon_130108.png', class: 'w-8 h-8' },
+                            { name: 'JavaScript', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png', class: 'w-8 h-8' },
+                            { name: 'LUA', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/947px-Lua-Logo.svg.png', class: 'w-8 h-8' },
+                            { name: 'C#', img: 'https://static.cdnlogo.com/logos/c/68/c-sharp-350x350.png', class: 'w-8 h-8' },
+                        ],
+                    },
+                ]"
+             />
+
+            <List 
+                title="Database management"
+                :elements="[
+                    { 
+                        component: components.languages, data: [
+                            { name: 'MySQL', img: 'https://seeklogo.com/images/M/mysql-logo-69B39F7D18-seeklogo.com.png', class: 'w-8 h-8' },
+                            { name: 'MariaDB', img: 'https://cdn.worldvectorlogo.com/logos/mariadb.svg', class: '' },
+                            { name: 'MongoDB', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Antu_mongodb.svg/1200px-Antu_mongodb.svg.png', class: 'ml-2 w-8 h-8' },
+                        ],
+                    },
+                    { 
+                        component: components.languages, data: [
+                            { name: 'TypeORM', img: 'https://user-images.githubusercontent.com/30929568/119166117-e0c9d700-ba7b-11eb-9aac-3916430ad28a.png', class: '' },
+                        ],
+                    },
                 ]"
              />
              
-            <List 
-                title="O que está acontecendo"
-                :elements="[
-                    { component: components.newscomponent },
-                    { component: components.newscomponent },
-                    { component: components.newscomponent },
-                    { component: components.newscomponent },
-                ]"
-             />
         </div>
     </div>
 </template>
@@ -43,6 +80,7 @@
     import _ from 'lodash';
     import List from './List.vue'
     import FollowSugestion from './FollowSugestion.vue'
+    import Mylanguages from './Mylanguages.vue';
     import News from './News.vue'
     import { SearchIcon } from '@heroicons/vue/outline'
     import { markRaw } from 'vue'
@@ -50,7 +88,8 @@
 
     const components = markRaw({ 
         newscomponent: News,
-        followercomponent: FollowSugestion
+        followercomponent: FollowSugestion,
+        languages: Mylanguages
     })
 
     export default {
