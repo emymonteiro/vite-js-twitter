@@ -31,8 +31,12 @@
                 </p>
 
                 <p>
-                    Github <a href="https://github.com/emymonteiro/" target="_blank">emymonteiro</a>
+                    <a href="https://github.com/emymonteiro/" target="_blank">Github</a>
                 </p>
+                <p>
+                    <a href="https://www.linkedin.com/in/emilly-monteiro-580254191/" target="_blank">Linkedin</a>
+                </p>
+                <p></p>
 
                 <ul>
                     <li>
