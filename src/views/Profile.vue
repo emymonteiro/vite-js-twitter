@@ -23,7 +23,15 @@
                 <h2>@emymonteiro</h2>
 
                 <p>
-                    Developer at <a href="https://cidadesouth.com" target="_blank">SouthRP</a>
+                    - Desenvolvedora - 
+                </p>
+                <p>
+                    Atualmente trabalhando com <a href="https://fivem.net" target="_blank">FiveM</a> <br/>
+                    Atuando no servidor em especifico <a href="https://cidadesouth.com" target="_blank">SouthRP</a>
+                </p>
+
+                <p>
+                    Github <a href="https://github.com/emymonteiro/" target="_blank">emymonteiro</a>
                 </p>
 
                 <ul>
@@ -34,7 +42,15 @@
                     </li>
                     <li>
                        <LocationMarkerIcon class="h-5 w-5 text-outline dark:text-white mr-1" />
-                        Campo Grande, MS - Brazil
+                        Campo Grande - MS, Brasil
+                    </li>
+                    <li>
+                       <InboxIcon class="h-5 w-5 text-outline dark:text-white mr-1" />
+                        emymonteiro.sweetie@gmail.com
+                    </li>
+                    <li>
+                       <DeviceMobileIcon class="h-5 w-5 text-outline dark:text-white mr-1" />
+                        (67) 9 9108-5487
                     </li>
                 </ul>
                 <div id="Followage" class="flex">
@@ -55,9 +71,9 @@
 <script>
     import { ArrowLeftIcon } from "@heroicons/vue/outline"
     import Feed from '../components/Feed.vue'
-    import { LocationMarkerIcon, CakeIcon } from "@heroicons/vue/solid"
+    import { LocationMarkerIcon, CakeIcon, InboxIcon, DeviceMobileIcon } from "@heroicons/vue/outline"
     export default{
-        components: { ArrowLeftIcon, LocationMarkerIcon, CakeIcon, Feed }
+        components: { ArrowLeftIcon, LocationMarkerIcon, CakeIcon, InboxIcon, DeviceMobileIcon , Feed }
     }
 </script>
 

@@ -21,7 +21,7 @@
             </button>
         </header>
         <footer id="MenuBarFooter" class="mt-5 flex items-center">
-            <div id="MenuBarAvatar" class="w-[39px] h-[39px] flex-shrink-0 rounded-full bg-gray"></div>
+            <img id="MenuBarAvatar" class="w-[39px] h-[39px] flex-shrink-0 rounded-full " src="https://avatars.githubusercontent.com/u/49368251?v=4" />
             <div id="MenuBarProfileData" class="hidden xl:flex flex-col ml-[10px] text-[14px]">
                 <strong>Emilly Monteiro</strong>
                 <span class="font-normal text-gray">@emymonteiro</span>

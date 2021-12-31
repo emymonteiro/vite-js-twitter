@@ -30,7 +30,7 @@ const routes = [
     },
     {
         path: '/vite-js-twitter/notifications',
-        name: 'Notifications',
+        name: 'Notificações',
         component: Profile,
         icon: BellIcon,
         menuBar: true,
@@ -38,7 +38,7 @@ const routes = [
     },
     {
         path: '/vite-js-twitter/messages',
-        name: 'Messages',
+        name: 'Mensagens',
         component: Profile,
         icon: InboxIcon,
         menuBar: true,
@@ -46,7 +46,7 @@ const routes = [
     },
     {
         path: '/vite-js-twitter/favorite',
-        name: 'Favorite',
+        name: 'Favoritos',
         component: Profile,
         icon: HeartIcon,
         menuBar: true,

@@ -6,7 +6,7 @@
             
         </div>
         
-        <div id="SideBarBody" ref="sidebarContent">
+        <div id="SideBarBody" ref="sidebarContent" :class="sidebarStyles">
             <List
             title="O que foi utilizado"
             :elements="[
