@@ -101,6 +101,7 @@
                             display_name: this.authorName,
                             username: this.authorNick
                         },
+                        date: 'Hoje',
                         isTweet: true,
                         body: this.tweetValue,
                         image,
