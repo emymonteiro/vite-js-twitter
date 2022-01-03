@@ -44,7 +44,6 @@
                 authorPic: "https://cdn.discordapp.com/attachments/861412803256123394/926585509696913478/tenor.gif",
                 authorName: 'Emysbot',
                 authorNick: '@ImaRobot',
-                tweetBody: '',
                 UserTweets: [{
                     author: {
 			            profile_img_url: "https://cdn.discordapp.com/attachments/861412803256123394/926585509696913478/tenor.gif",
@@ -123,6 +122,8 @@
 <script setup>
     import Tweet from '../components/Tweet.vue'
     import { PhotographIcon, SparklesIcon, XIcon } from '@heroicons/vue/outline';
+
+    const tweetBody = ''
    
     const resize = (e) =>{
         e.target.style.height = 'auto'
