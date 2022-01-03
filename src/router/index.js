@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Profile from '../views/Profile.vue'
-/* import Home from '../views/Home.vue' */
+import Home from '../views/Home.vue'
 import { HomeIcon, BellIcon, SearchIcon, HeartIcon, InboxIcon, UserIcon, HashtagIcon, LogoutIcon } from "@heroicons/vue/outline"
 
 const routes = [
@@ -14,7 +14,7 @@ const routes = [
     {
         path: '/vite-js-twitter/home',
         name: 'Página Inicial',
-        component: Profile,
+        component: Home,
         icon: HomeIcon,
         menuBar: true,
         mainMenu: true

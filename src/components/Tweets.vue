@@ -1,6 +1,6 @@
 <template>
     <div id="TweetsContainer" class="flex flex-col flex-shrink-0">
-        <tweet v-for="(tweet, index) in tweets" :key="index" :tweet="tweet" />
+        <Tweet v-for="(tweet, index) in tweets" :key="index" :tweet="tweet" />
     </div>
 </template>
 

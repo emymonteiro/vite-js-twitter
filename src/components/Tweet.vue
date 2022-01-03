@@ -1,6 +1,6 @@
 <template>
         <div class="Tweet max-w-full flex flex-col border-solid border-b border-white dark:border-outline">
-            <div class="Retweeted flex items-center text-gray ml-[30px] ">
+            <div v-if="!tweet.isTweet" class="Retweeted flex items-center text-gray ml-[30px] ">
                 <fa icon="retweet" class="retweetIcon mr-[10px]  h-[16px] w-[16px]" />
                 Você retweetou
             </div>
