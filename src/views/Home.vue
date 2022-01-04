@@ -41,7 +41,6 @@
         data(){
             return {
                 url: undefined,
-                tweetBody: '',
                 authorPic: "https://cdn.discordapp.com/attachments/861412803256123394/926585509696913478/tenor.gif",
                 authorName: 'Emysbot',
                 authorNick: '@ImaRobot',
@@ -123,7 +122,7 @@
 <script setup>
     import Tweet from '../components/Tweet.vue'
     import { PhotographIcon, SparklesIcon, XIcon } from '@heroicons/vue/outline';
-   
+    let tweetBody = ''
     const resize = (e) =>{
         e.target.style.height = 'auto'
         e.target.style.height = `${e.target.scrollHeight}px`
