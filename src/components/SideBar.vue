@@ -45,7 +45,7 @@
                 :elements="[
                     { 
                         component: components.languages, data: [
-                            { name: 'TypeScript', img: 'https://cdn.icon-icons.com/icons2/2107/PNG/512/file_type_typescript_icon_130108.png', class: 'w-8 h-8' },
+                            { name: 'TypeScript', img: 'https://cdn.discordapp.com/attachments/681309726797201420/927972035638992956/file_type_typescript_icon_130108.png', class: 'w-8 h-8' },
                             { name: 'JavaScript', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png', class: 'w-8 h-8' },
                             { name: 'LUA', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/947px-Lua-Logo.svg.png', class: 'w-8 h-8' },
                             { name: 'C#', img: 'https://static.cdnlogo.com/logos/c/68/c-sharp-350x350.png', class: 'w-8 h-8' },

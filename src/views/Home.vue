@@ -123,7 +123,7 @@
     import Tweet from '../components/Tweet.vue'
     import { PhotographIcon, SparklesIcon, XIcon } from '@heroicons/vue/outline';
 
-    const tweetBody = ''
+    let tweetBody = ''
    
     const resize = (e) =>{
         e.target.style.height = 'auto'
