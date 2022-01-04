@@ -41,6 +41,7 @@
         data(){
             return {
                 url: undefined,
+                tweetBody: '',
                 authorPic: "https://cdn.discordapp.com/attachments/861412803256123394/926585509696913478/tenor.gif",
                 authorName: 'Emysbot',
                 authorNick: '@ImaRobot',
@@ -85,6 +86,7 @@
             },
             SendTweet(){
                 let image = undefined
+                let text = this.tweetBody
 
                 if (this.url){
                     image = {
@@ -92,6 +94,7 @@
                         alt: 'image'
                     }
                 }
+
                 
                 this.UserTweets.push(
                     {
@@ -102,7 +105,7 @@
                         },
                         date: 'Hoje',
                         isTweet: true,
-                        body: `<p style="white-space: pre-line;">${this.tweetBody}</p><br>`,
+                        body: `<p style="white-space: pre-line;">${text}</p><br>`,
                         image,
                         stats: {
 		            	    likes: [],
@@ -112,8 +115,9 @@
 
                     }
                 );
-                this.resetUrl();
+
                 this.tweetBody = ''
+                this.resetUrl();
             }
         }
     }
@@ -122,14 +126,10 @@
 <script setup>
     import Tweet from '../components/Tweet.vue'
     import { PhotographIcon, SparklesIcon, XIcon } from '@heroicons/vue/outline';
-    let tweetBody = ''
     const resize = (e) =>{
         e.target.style.height = 'auto'
         e.target.style.height = `${e.target.scrollHeight}px`
     }
-
-
-
 
 </script>
 
