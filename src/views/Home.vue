@@ -103,7 +103,7 @@
                         },
                         date: 'Hoje',
                         isTweet: true,
-                        body: this.tweetBody,
+                        body: `<p style="white-space: pre-line;">${this.tweetBody}</p><br>`,
                         image,
                         stats: {
 		            	    likes: [],
