@@ -15,7 +15,7 @@
             <main class="flex flex-col max-h-full overflow-y-auto pt-2 border-b border-solid border-white dark:border-outline ">
                 <div class="flex p-[10px] items ">
                     <img src="https://avatars.githubusercontent.com/u/49368251?v=4" class="rounded-full w-[60px] h-[60px] text-tw dark:text-primary" />
-                    <textarea @input="resize($event)" class="box-border overflow-y-hidden ml-[10px] mt-[10px] border-b border-solid text-[19px] border-white dark:border-outline" v-model="tweetBody" placeholder="O que está acontecendo" rows="1" cols="50" ></textarea>
+                    <textarea id="textmessage" @input="resize($event)" class="box-border overflow-y-hidden ml-[10px] mt-[10px] border-b border-solid text-[19px] border-white dark:border-outline" v-model="tweetBody" placeholder="O que está acontecendo" rows="1" cols="50" ></textarea>
                 </div>
                 <div v-if="url" class="flex bg-tw  justify-center flex-col ">
                     <XIcon class="self-end mr-[50px] w-8 h-8 p-1 rounded-full bg-lesswhite cursor-pointer dark:bg-secondary hover:dark:bg-tdarkhover hover:bg-white" @click="resetUrl" />
@@ -37,11 +37,13 @@
 </template>
 
 <script>
+    import Tweet from '../components/Tweet.vue'
+    import { PhotographIcon, SparklesIcon, XIcon } from '@heroicons/vue/outline';
     export default{
+        components: { Tweet, PhotographIcon, SparklesIcon, XIcon },
         data(){
-            return {
+            return{
                 url: undefined,
-                tweetBody: '',
                 authorPic: "https://cdn.discordapp.com/attachments/861412803256123394/926585509696913478/tenor.gif",
                 authorName: 'Emysbot',
                 authorNick: '@ImaRobot',
@@ -72,10 +74,21 @@
 		            	]
 		            }
                 }]
-
+            }
+        },
+        setup(){
+            return {
+                Tweet, PhotographIcon, SparklesIcon, XIcon, tweetBody: ''
             }
         },
         methods: {
+            resize(e){
+                e.target.style.height = 'auto'
+                e.target.style.height = `${e.target.scrollHeight}px`
+            },
+            resizeId(){
+                document.getElementById('textmessage').style.height = 'auto'
+            },
             onFileChange(e){
                 const file = e.target.files[0];
                 this.url = URL.createObjectURL(file);
@@ -118,20 +131,12 @@
 
                 this.tweetBody = ''
                 this.resetUrl();
+                this.resizeId();
             }
         }
     }
 </script>
 
-<script setup>
-    import Tweet from '../components/Tweet.vue'
-    import { PhotographIcon, SparklesIcon, XIcon } from '@heroicons/vue/outline';
-    const resize = (e) =>{
-        e.target.style.height = 'auto'
-        e.target.style.height = `${e.target.scrollHeight}px`
-    }
-
-</script>
 
 <style scoped>
     @media (max-width: 499px) {
