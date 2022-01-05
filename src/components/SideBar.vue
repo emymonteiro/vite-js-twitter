@@ -1,12 +1,12 @@
 <template>
-    <div id="SideBarContainer"  class="hidden media:flex flex-col">
+    <div id="SideBarContainer"  ref="sidebarContent" class="hidden media:flex flex-col">
         <div id="SearchWrapper" class=" p-[10px_24px] fixed max-h-[57px] focus-within:transition focus-within:ease-in-out focus-within:delay-180 focus-within:text-twitter top-0 z-[2] bg-tw dark:bg-primary">
             <input placeholder="Search" class="outline-0 focus:text-primary dark:focus:text-white  border border-solid border-transparent focus:border-twitter w-full placeholder:text-gray relative rounded-[19.5px] bg-lesswhite dark:bg-search h-[39px] text-[14px] p-[0_10px_0_52px]" >
             <SearchIcon class="h-[27px] w-[27px]   relative top-[-33px] left-[15px] z-[1] ease-in-out delay-180" />
             
         </div>
         
-        <div id="SideBarBody" ref="sidebarContent" :class="sidebarStyles">
+        <div id="SideBarBody" :class="sidebarStyles">
             <List
             title="O que foi utilizado"
             :elements="[
@@ -106,14 +106,10 @@
         },
         computed:{
             sidebarStyles(){
-               /* console.log('height ' + this.sidebar.height)
-               console.log('window ' + this.sidebar.windowHeight)
-               console.log('scroll ' + this.sidebar.windowScrollTop)
-               console.log('scroll + window ' + (this.sidebar.windowScrollTop + this.sidebar.windowHeight)) */
-               if(this.sidebar.height <= this.sidebar.windowHeight)
-                return { 'fixed-top': true}
-               if ((this.sidebar.windowScrollTop + this.sidebar.windowHeight) > this.sidebar.height)
-                return { 'fixed-bottom': true}
+               if ((this.sidebar.windowScrollTop + this.sidebar.windowHeight) > this.sidebar.height){
+                    return { 'fixed-bottom': true}
+               }
+
             }
         },
         created(){
@@ -131,7 +127,7 @@
                 this.sidebar.windowScrollTop = window.pageYOffset || document.documentElement.scrollTop;
             },1),
             calculateSidebar(){
-                this.sidebar.height = this.$refs.sidebarContent.offsetHeight || 0;
+                this.sidebar.height = this.$refs.sidebarContent.offsetHeight;
                 this.sidebar.windowHeight = window.innerHeight;
             }
         }
