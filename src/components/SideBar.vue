@@ -28,7 +28,6 @@
                     },
                     { 
                         component: components.languages, data: [
-                            { name: 'Node',  class: 'w-6' , img: 'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png' },
                             { name: 'Vite', img: 'https://seeklogo.com/images/V/vite-logo-BFD4283991-seeklogo.com.png', class: 'w-6' },
                             { name: 'Vue', img: 'https://v3.vuejs.org/logo.png', class: 'w-6' },
                             { name: 'React', img: 'https://logospng.org/download/react/logo-react-256.png', class: 'ml-[-6px] w-8' },
@@ -45,6 +44,7 @@
                 :elements="[
                     { 
                         component: components.languages, data: [
+                            { name: 'Node',  class: 'w-6' , img: 'https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png' },
                             { name: 'TypeScript', img: 'https://cdn.discordapp.com/attachments/681309726797201420/927972035638992956/file_type_typescript_icon_130108.png', class: 'w-8 h-8' },
                             { name: 'JavaScript', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/480px-Unofficial_JavaScript_logo_2.svg.png', class: 'w-8 h-8' },
                             { name: 'LUA', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Lua-Logo.svg/947px-Lua-Logo.svg.png', class: 'w-8 h-8' },
